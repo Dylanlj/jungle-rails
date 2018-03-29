@@ -1,8 +1,14 @@
 class Admin::ProductsController < ApplicationController
 
+  http_basic_authenticate_with name: ENV['HTTP_AUTHENTICATION_NAME'], password: ENV['HTTP_AUTHENTICATION_PASSWORD'], except: :index
+
   def index
     @products = Product.order(id: :desc).all
   end
+
+   def edit
+     render plain: "I'm only accessible if you know the password"
+   end
 
   def new
     @product = Product.new

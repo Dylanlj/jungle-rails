@@ -1,14 +1,24 @@
 class UsersController < ApplicationController
+
+
+
+
   def new
   end
   def create
-    user = User.new(user_params)
-    if user.save
-      session[:user_id] = user.id
+    @user = User.new(user_params)
+
+    if @user.save
+      session[:user_id] = @user.id
       redirect_to '/'
     else
+          puts "these are the error messages #{@user.errors.messages}"
+      @user.errors.messages.each do |newError|
+    puts newError
+  end
       redirect_to '/signup'
     end
+
   end
 
   private
@@ -17,7 +27,8 @@ class UsersController < ApplicationController
         :first_name,
         :last_name,
         :email,
-        :password)
+        :password,
+        :password_confirmation)
     end
 
 end

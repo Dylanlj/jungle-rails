@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       puts session[:user_id]
       redirect_to '/'
     else
-      puts "fuuuuuuuuuck"
+
       redirect_to '/login'
     end
   end

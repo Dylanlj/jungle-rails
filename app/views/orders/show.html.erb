@@ -1,13 +1,56 @@
 <section class="orders-show">
 
-  <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
-  </header>
+
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <div class="panel panel-default items">
+
+      <section class="cart-show">
+        <header class="page-header">
+          <h1>Order #<%= @order.id %></h1>
+
+        </header>
+        <h4>Thank you for your order!</h4>
+        <div class="panel panel-default items">
+
+          <table class="table table-bordered">
+
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Units Total</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+          <tbody>
+            <%= render 'item' %>
+
+          </tbody>
+            <tfoot>
+              <tr>
+                <th >
+                  TOTAL:
+                </th>
+                <th>
+                  <%=@order.total_cents%>
+                </th>
+              </tr>
+              <tr>
+                <th >
+                  Email:
+                </th>
+                <th>
+                  <%=@order.email%>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+      </div>
+
+    </section>
+    </div>
   </div>
-
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
-
 </section>

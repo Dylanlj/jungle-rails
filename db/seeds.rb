@@ -29,6 +29,7 @@ cat1 = Category.find_or_create_by! name: 'Apparel'
 cat2 = Category.find_or_create_by! name: 'Electronics'
 cat3 = Category.find_or_create_by! name: 'Furniture'
 
+
 ## PRODUCTS
 
 puts "Re-creating Products ..."
@@ -132,5 +133,43 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## reviews
+Review.destroy_all
+
+prod1 = Product.find_or_create_by! name: 'Men\'s Classy shirt'
+prod2 = Product.find_or_create_by! name: 'Electric Chair'
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: "Terrible, didn't fix my gluten allergy",
+  rating: 2
+})
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: "I want my bitcoin refunded"
+})
+
+
+prod2.reviews.create!({
+  user_id: 1,
+  description: "the retroactive transgression of it's spirit did nothing to relieve my bourgeois ennui",
+  rating: 5
+})
+
+## users
+User.destroy_all
+
+User.create!({
+  first_name: "dyl",
+  last_name: "dyl",
+  email: "dyl@dyl.com",
+  password: "dyl",
+  password_confirmation: "dyl"
+})
 
 puts "DONE!"
+
+
+
+

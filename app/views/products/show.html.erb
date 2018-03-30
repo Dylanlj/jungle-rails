@@ -25,7 +25,14 @@
         </dl>
       </div>
     </div>
-
+    <% if @product.reviews.any? %>
+      <article class="review-detail">
+        <h3>Reviews</h3>
+        <div class="row">
+          <%= render 'review' %>
+        </div>
+      </article>
+    <% end %>
   </article>
 
 </section>

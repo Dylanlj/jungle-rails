@@ -14,11 +14,12 @@
     <!-- need to fix the money format -->
       <p><%= item.product.name %></p>
       <p><%= item.product.description %></p>
-      <p>items price <%= item.total_price_cents %></p>
+      <p>items price <%= number_to_currency (item.total_price_cents/100.0) %></p>
       <p>quantity <%= item.quantity %></p>
     <% end %>
     </p>
-      <p> Total Order Price: <%=@order.total_cents%></p>
+      <p> Total Order Price: <%= number_to_currency (@order.total_cents/100.0) %>  </p>
     <p>Thanks for your order and have a great day!</p>
   </body>
 </html>
+

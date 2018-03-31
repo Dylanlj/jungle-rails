@@ -25,6 +25,9 @@
         </dl>
       </div>
     </div>
+    <% if current_user %>
+    <%= render 'form' %>
+    <% end %>
     <% if @product.reviews.any? %>
       <article class="review-detail">
         <h3>Reviews</h3>

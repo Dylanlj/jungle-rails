@@ -1,6 +1,6 @@
 
 
-<% @product.reviews.each do |rev| %>
+<% @product.reviews.reverse_each do |rev| %>
   <div class="col-sm-8">
     <dl class="dl-horizontal">
       <dt>Email</dt>
@@ -12,7 +12,15 @@
       <% if rev.rating %>
       <dt>Rating</dt>
       <dd><%= rev.rating %></dd>
-      <% end %>
+      <dt>
+              <% end %>
+        <% if current_user.id == rev.user_id %>
+        <td>
+          <%= link_to fa_icon('trash'), product_review_path(@product, rev), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+        </td>
+    <% end %>
+
+
     </dl>
   </div>
 

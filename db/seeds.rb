@@ -147,7 +147,8 @@ prod1.reviews.create!({
 
 prod1.reviews.create!({
   user_id: 1,
-  description: "I want my bitcoin refunded"
+  description: "I want my bitcoin refunded",
+  rating: 3
 })
 
 

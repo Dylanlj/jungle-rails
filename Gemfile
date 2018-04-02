@@ -48,7 +48,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
-  gem 'faker'
   gem 'byebug'
   gem 'quiet_assets'
   gem 'dotenv-rails'

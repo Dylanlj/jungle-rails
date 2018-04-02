@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
   describe 'Validations' do
 
-    describe "all valid fields" do
+    describe "the system" do
       before :each do
         @category = Category.new(name: "hipster")
         @category.save

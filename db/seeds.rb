@@ -165,8 +165,8 @@ User.create!({
   first_name: "dyl",
   last_name: "dyl",
   email: "dyl@dyl.com",
-  password: "dyl",
-  password_confirmation: "dyl"
+  password: "dylirium",
+  password_confirmation: "dylirium"
 })
 
 puts "DONE!"

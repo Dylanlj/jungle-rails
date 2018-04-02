@@ -7,15 +7,16 @@ class UsersController < ApplicationController
   end
   def create
     @user = User.new(user_params)
+    @user.email = @user.email.downcase
 
     if @user.save
       session[:user_id] = @user.id
       redirect_to '/'
     else
-          puts "these are the error messages #{@user.errors.messages}"
+      puts "these are the error messages #{@user.errors.messages}"
       @user.errors.messages.each do |newError|
-    puts newError
-  end
+        puts newError
+      end
       redirect_to '/signup'
     end
 

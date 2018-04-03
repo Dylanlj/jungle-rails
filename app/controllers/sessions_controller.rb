@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    @user = User.new
   end
 
   def create
@@ -9,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
 
-      redirect_to login_path
+      render :new
     end
   end
 

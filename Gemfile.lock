@@ -62,6 +62,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
     cliver (0.3.2)
+    coderay (1.1.2)
     concurrent-ruby (1.0.2)
     database_cleaner (1.6.2)
     debug_inspector (0.0.2)
@@ -73,11 +74,6 @@ GEM
       dotenv (= 1.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
     faker (1.6.1)
       i18n (~> 0.5)
     font-awesome-rails (4.5.0.1)
@@ -103,6 +99,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    method_source (0.9.0)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -130,6 +127,11 @@ GEM
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-rails (0.3.6)
+      pry (>= 0.10.4)
     public_suffix (3.0.2)
     puma (3.5.2)
     quiet_assets (1.0.3)
@@ -248,7 +250,6 @@ DEPENDENCIES
   carrierwave
   database_cleaner
   dotenv-rails
-  factory_girl_rails
   faker
   font-awesome-rails
   jbuilder (~> 2.0)
@@ -258,6 +259,7 @@ DEPENDENCIES
   newrelic_rpm
   pg
   poltergeist
+  pry-rails
   puma
   quiet_assets
   rails (= 4.2.6)

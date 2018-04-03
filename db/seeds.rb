@@ -168,6 +168,27 @@ User.create!({
   password: "dylirium",
   password_confirmation: "dylirium"
 })
+User.create!({
+  first_name: "for",
+  last_name: "for",
+  email: "for@for.com",
+  password: "foririum",
+  password_confirmation: "foririum"
+})
+User.create!({
+  first_name: "par",
+  last_name: "par",
+  email: "par@par.com",
+  password: "paririum",
+  password_confirmation: "paririum"
+})
+User.create!({
+  first_name: "rar",
+  last_name: "rar",
+  email: "rar@rar.com",
+  password: "raririum",
+  password_confirmation: "raririum"
+})
 
 puts "DONE!"
 

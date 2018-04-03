@@ -6,23 +6,21 @@
       <dt>Email</dt>
       <dd><%= User.find(rev.user_id).email %></dd>
       <% if rev.description %>
-      <dt>Review</dt>
-      <dd><%= rev.description %></dd>
+        <dt>Review</dt>
+        <dd><%= rev.description %></dd>
       <% end %>
       <% if rev.rating %>
-      <dt>Rating</dt>
-      <dd><%= rev.rating %></dd>
-      <dt>
-              <% end %>
+        <dt>Rating</dt>
+        <dd><%= rev.rating %></dd>
+        <dt>
+      <% end %>
+      <% if current_user %>
         <% if current_user.id == rev.user_id %>
-        <td>
-          <%= link_to fa_icon('trash'), product_review_path(@product, rev), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
-        </td>
-    <% end %>
-
-
+          <td>
+            <%= link_to fa_icon('trash'), product_review_path(@product, rev), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+          </td>
+        <% end %>
+      <% end %>
     </dl>
   </div>
-
-
 <% end %>

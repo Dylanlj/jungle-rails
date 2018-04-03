@@ -30,6 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma'
+gem 'pry-rails'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
@@ -45,7 +46,6 @@ gem 'faker'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'faker'
@@ -58,6 +58,7 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'faker'
 end
 
 group :development do

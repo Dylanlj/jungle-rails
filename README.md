@@ -3,7 +3,9 @@
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
 ## Screenshots
-!["Screenshot description"](https://github.com/Dylanlj/chatty-app/blob/master/docs/saul-goodman.png?raw=true)
+!["Homepage"](https://github.com/Dylanlj/jungle-rails/blob/master/docs/root.png)
+!["Product and reviews"](https://github.com/Dylanlj/jungle-rails/blob/master/docs/product.png)
+!["Checking out a cart"](https://github.com/Dylanlj/jungle-rails/blob/master/docs/pay.png)
 
 ## Setup
 

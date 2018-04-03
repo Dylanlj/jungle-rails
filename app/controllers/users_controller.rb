@@ -4,7 +4,10 @@ class UsersController < ApplicationController
 
 
   def new
+    @user = User.new
+
   end
+
   def create
     @user = User.new(user_params)
     @user.email = @user.email.downcase
@@ -17,7 +20,7 @@ class UsersController < ApplicationController
       @user.errors.messages.each do |newError|
         puts newError
       end
-      redirect_to '/signup'
+      render :new
     end
 
   end

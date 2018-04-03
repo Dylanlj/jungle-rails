@@ -2,6 +2,8 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Screenshots
+!["Screenshot description"](https://github.com/Dylanlj/chatty-app/blob/master/docs/saul-goodman.png?raw=true)
 
 ## Setup
 
@@ -26,3 +28,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+
+still need errors for reviews
+

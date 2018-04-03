@@ -28,13 +28,29 @@
     <% if current_user %>
     <%= render 'form' %>
     <% end %>
+    <br>
     <% if @product.reviews.any? %>
-      <article class="review-detail">
-        <h3>Reviews</h3>
-        <div class="row">
-          <%= render 'review' %>
+
+      <section class="admin-products-index reviews">
+
+        <div class="panel panel-default products">
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th >Reviews</th>
+                <th>Rating</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render 'review' %>
+            </tbody>
+          </table>
+
         </div>
-      </article>
+
+      </section>
     <% end %>
   </article>
 
